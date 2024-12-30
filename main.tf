@@ -1,13 +1,18 @@
 provider "aws" {
   region = "ap-south-1"
+<<<<<<< HEAD
   secret_key = ""
   access_key = ""
+=======
+  access_key = ""
+  secret_key = ""
+>>>>>>> 9996997 (updated)
 }
 
 terraform {
   backend "s3" {
     encrypt = false
-    bucket = "tf-state-s3"
+    bucket = "tf-s3-bucket-v1"
     dynamodb_table = "tf-state-lock-dynamo"
     key = "path/path/terraform-tfstate"
     region = "ap-south-1"
